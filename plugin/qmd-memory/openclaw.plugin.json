@@ -1,0 +1,103 @@
+{
+  "id": "qmd-memory",
+  "kind": "utility",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "qmdPath": {
+        "type": "string"
+      },
+      "index": {
+        "type": "string"
+      },
+      "autoRecall": {
+        "type": "boolean"
+      },
+      "recallMode": {
+        "type": "string"
+      },
+      "maxResults": {
+        "type": "number"
+      },
+      "minScore": {
+        "type": "number"
+      },
+      "timeoutMs": {
+        "type": "number"
+      },
+      "maxSnippetChars": {
+        "type": "number"
+      },
+      "autoCapture": {
+        "type": "boolean"
+      },
+      "governanceEnabled": {
+        "type": "boolean"
+      },
+      "memoryRootDir": {
+        "type": "string"
+      },
+      "updateIndexAfterWrite": {
+        "type": "boolean"
+      }
+    }
+  },
+  "uiHints": {
+    "qmdPath": {
+      "label": "QMD Path",
+      "placeholder": "qmd",
+      "help": "CLI path for QMD"
+    },
+    "index": {
+      "label": "QMD Index",
+      "placeholder": "openclaw-memory",
+      "help": "Named QMD index used for recall"
+    },
+    "autoRecall": {
+      "label": "Auto Recall",
+      "help": "Inject relevant QMD memories before each response"
+    },
+    "recallMode": {
+      "label": "Recall Mode",
+      "placeholder": "vsearch",
+      "help": "vsearch is the safest default because it avoids the heavier query model"
+    },
+    "maxResults": {
+      "label": "Max Results",
+      "placeholder": "4"
+    },
+    "minScore": {
+      "label": "Min Score",
+      "placeholder": "0.35"
+    },
+    "timeoutMs": {
+      "label": "Timeout",
+      "placeholder": "8000",
+      "advanced": true
+    },
+    "maxSnippetChars": {
+      "label": "Snippet Limit",
+      "placeholder": "280",
+      "advanced": true
+    },
+    "autoCapture": {
+      "label": "Auto Capture",
+      "help": "Capture high-signal user and assistant turns into governed markdown memory"
+    },
+    "governanceEnabled": {
+      "label": "Governance",
+      "help": "Run dedupe, tier decay, and expiry archival on memory files"
+    },
+    "memoryRootDir": {
+      "label": "Memory Root",
+      "placeholder": "~/.openclaw/workspace/memory",
+      "help": "Where governed markdown memories are stored"
+    },
+    "updateIndexAfterWrite": {
+      "label": "Refresh QMD Index",
+      "help": "Run qmd update after memory capture or governance changes",
+      "advanced": true
+    }
+  }
+}

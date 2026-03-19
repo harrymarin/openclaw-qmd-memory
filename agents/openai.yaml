@@ -1,0 +1,5 @@
+interface:
+  display_name: "OpenClaw QMD Memory"
+  short_description: "Install QMD-backed recall, capture, and memory governance for OpenClaw"
+  default_prompt: "Use OpenClaw QMD Memory when the user wants a local-first OpenClaw memory upgrade with QMD recall, automatic markdown capture, and governed memory tiering without downgrading OpenClaw."
+
