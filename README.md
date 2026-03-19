@@ -1,24 +1,36 @@
-[![English](https://img.shields.io/badge/README-English-blue)](./README.en.md)
-[![License](https://img.shields.io/badge/license-MIT-black)](./LICENSE)
+[![English](https://img.shields.io/badge/English-Click_to_View-blue)](./README.en.md)
+[![中文](https://img.shields.io/badge/中文-当前-green)](./README.md)
+[![Install](https://img.shields.io/badge/Install-Guide-orange)](#安装)
+[![Structure](https://img.shields.io/badge/Structure-Architecture-purple)](#仓库结构)
+[![Release](https://img.shields.io/github/v/release/harrymarin/openclaw-qmd-memory?style=flat-square)](https://github.com/harrymarin/openclaw-qmd-memory/releases)
+[![License](https://img.shields.io/badge/License-MIT-lightgrey)](./LICENSE)
 
 # OpenClaw QMD Memory
 
-一个给 OpenClaw 用的本地优先记忆增强 skill。
-
-它在不降级 OpenClaw、也不替换原生 `memory-core` 的前提下，加上一套更实用的记忆链路：
-
-- QMD 本地语义召回
-- 高信号对话自动沉淀为 markdown 记忆
-- 记忆去重、分层、过期、归档治理
+`openclaw-qmd-memory` 是一个给 OpenClaw 用的本地优先记忆增强 skill。它不是替换整套记忆系统，而是在不降级 OpenClaw、也不替换原生 `memory-core` 的前提下，补上一套更实用、可治理、可回溯的本地记忆链路。
 
 ## 快速导航
 
 - [为什么做这个](#为什么做这个)
 - [核心能力](#核心能力)
+- [快速开始](#快速开始)
 - [安装](#安装)
 - [使用方式](#使用方式)
 - [仓库结构](#仓库结构)
 - [发布资产](#发布资产)
+
+## 快速开始
+
+1. 下载仓库或 release zip
+2. 把整个目录放到本地可执行位置
+3. 运行安装脚本
+4. 运行验证脚本
+5. 确认插件、索引和 recall 都已正常工作
+
+```bash
+bash scripts/install.sh
+bash scripts/verify.sh
+```
 
 ## 为什么做这个
 
@@ -70,9 +82,7 @@ bash scripts/verify.sh
 ~/.codex/skills/openclaw-qmd-memory
 ```
 
-或者直接把整个仓库作为一个独立 OpenClaw memory 包使用。
-
-安装完成后，你可以：
+安装完成后，你可以运行：
 
 ```bash
 qmd --index openclaw-memory status
@@ -85,6 +95,9 @@ openclaw plugins list
 ```text
 openclaw-qmd-memory/
 ├── SKILL.md
+├── README.md
+├── README.en.md
+├── LICENSE
 ├── agents/openai.yaml
 ├── plugin/qmd-memory/
 ├── scripts/
@@ -101,7 +114,7 @@ openclaw-qmd-memory/
 ## 发布资产
 
 - 首个发布版本：`v0.1.0`
-- 建议下载 zip release 资产直接安装
+- 建议优先下载 release zip 资产安装
 
 ## License
 
